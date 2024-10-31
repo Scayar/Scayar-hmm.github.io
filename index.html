@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>تحذير: مخاطر الإنترنت!</title>
+</head>
+<body>
+    <video autoplay loop muted class="background-video" playsinline>
+        <source src="video/background.mp4" type="video/mp4">
+        متصفحك لا يدعم فيديو HTML5.
+    </video>
+    
+    <div class="overlay">
+        <header>
+            <h1>تحذير: مخاطر الإنترنت!</h1>
+            <a href="#threats">اكتشف المخاطر</a>
+        </header>
+        <main>
+            <section id="threats">
+                <h2>أنواع المخاطر</h2>
+                <ul>
+                    <li onclick="showDetails('ransomware')">🔒 فيروس رانسوم وير</li>
+                    <li onclick="showDetails('phishing')">🕵️‍♂️ التصيد الاحتيالي</li>
+                    <li onclick="showDetails('dataLeak')">📉 تسريب البيانات</li>
+                    <li onclick="showDetails('ddos')">🚫 الهجمات DDoS</li>
+                    <li onclick="showDetails('networkHacking')">🔐 اختراق الشبكات</li>
+                    <li onclick="showDetails('malware')">💻 البرمجيات الخبيثة</li>
+                    <li onclick="showDetails('identityTheft')">👤 سرقة الهوية</li>
+                    <li onclick="showDetails('internetFraud')">💰 الاحتيال على الإنترنت</li>
+                    <li onclick="showDetails('spyware')">👀 برمجيات التجسس</li>
+                    <li onclick="showDetails('adware')">📢 برمجيات الإعلانات</li>
+                    <li onclick="showDetails('rootkit')">🛡️ روت كيت</li>
+                    <li onclick="showDetails('keylogger')">⌨️ مسجل ضربات المفاتيح</li>
+                    <li onclick="showDetails('scareware')">😱 سكاروير</li>
+                    <li onclick="showDetails('zeroDay')">⚠️ ثغرة يوم الصفر</li>
+                    <li onclick="showDetails('worm')">🐛 دودة الكمبيوتر</li>
+                    <li onclick="showDetails('trojan')">🐴 حصان طروادة</li>
+                    <li onclick="showDetails('driveByDownload')">💾 تحميل عشوائي</li>
+                    <li onclick="showDetails('remoteAccessTrojan')">🔑 حصان طروادة للوصول عن بُعد</li>
+                    <li onclick="showDetails('socialEngineering')">🤝 الهندسة الاجتماعية</li>
+                    <li onclick="showDetails('credentialStuffing')">🗝️ حشو بيانات الاعتماد</li>
+                </ul>
+                <p>للمزيد من المعلومات، تحقق من الأوامر في Windows:</p>
+                <button onclick="showCommandInfo()">كيف تتحقق من المخاطر</button>
+            </section>
+        </main>
+        <footer>
+            <p>تابعني على إنستغرام: <a href="https://instagram.com/im_scayar">im_scayar</a></p>
+        </footer>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h3 id="popup-title"></h3>
+                <p id="popup-message"></p>
+                <h4>الحلول:</h4>
+                <ul id="solutions-list"></ul>
+            </div>
+        </div>
+
+        <div id="command-popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeCommandPopup()">&times;</span>
+                <h3>كيف تتحقق من المخاطر</h3>
+                <p>يمكنك استخدام الأوامر التالية في Windows Command Prompt للتحقق من الشبكة:</p>
+                <pre>netstat -an</pre>
+                <p>لمعرفة المزيد عن حالة الشبكة لديك. أو يمكنك زيارة الموقع:</p>
+                <a href="https://www.grc.com/default.htm" target="_blank">GRC</a>
+            </div>
+        </div>
+    </div>
+
+    <audio id="soundClick" src="audio/click.mp3"></audio>
+    <audio id="soundRansomware" src="audio/ransomware.mp3"></audio>
+    <audio id="soundPhishing" src="audio/phishing.mp3"></audio>
+    <audio id="soundDataLeak" src="audio/dataLeak.mp3"></audio>
+    <audio id="soundDdos" src="audio/ddos.mp3"></audio>
+    <audio id="soundNetworkHacking" src="audio/networkHacking.mp3"></audio>
+    <audio id="soundMalware" src="audio/malware.mp3"></audio>
+    <audio id="soundIdentityTheft" src="audio/identityTheft.mp3"></audio>
+    <audio id="soundInternetFraud" src="audio/internetFraud.mp3"></audio>
+    <audio id="soundSpyware" src="audio/spyware.mp3"></audio>
+    <audio id="soundAdware" src="audio/adware.mp3"></audio>
+    <audio id="soundRootkit" src="audio/rootkit.mp3"></audio>
+    <audio id="soundKeylogger" src="audio/keylogger.mp3"></audio>
+    <audio id="soundScareware" src="audio/scareware.mp3"></audio>
+    <audio id="soundZeroDay" src="audio/zeroDay.mp3"></audio>
+    <audio id="soundWorm" src="audio/worm.mp3"></audio>
+    <audio id="soundTrojan" src="audio/trojan.mp3"></audio>
+    <audio id="soundDriveByDownload" src="audio/driveByDownload.mp3"></audio>
+    <audio id="soundRemoteAccessTrojan" src="audio/remoteAccessTrojan.mp3"></audio>
+    <audio id="soundSocialEngineering" src="audio/socialEngineering.mp3"></audio>
+    <audio id="soundCredentialStuffing" src="audio/credentialStuffing.mp3"></audio>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
